@@ -1,5 +1,3 @@
-package searching;
-
 public class LinearSearch {
 	public static void main(String[] args) {
 		int[] arr = {3, 5, 12, 43, 1, 14};
