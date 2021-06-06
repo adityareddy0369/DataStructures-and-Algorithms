@@ -15,7 +15,7 @@ public class HashTableChaining {
 		}
 	}
 
-	public Chaining(int noOfBuckets) {
+	public HashTableChaining(int noOfBuckets) {
 		this.noOfBuckets = noOfBuckets;
 		this.buckets = new HashNode[noOfBuckets];
 		this.size = 0;
