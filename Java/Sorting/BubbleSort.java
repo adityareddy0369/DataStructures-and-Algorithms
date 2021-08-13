@@ -10,8 +10,8 @@ public class BubbleSort {
 	}
 
 	private int[] sort(int[] arr, int size) {
-		boolean isSwapped = false;
 		for (int i = 0; i < size; i++) {
+			boolean isSwapped = false;
 			for (int j = 0; j < size-1-i; j++) {
 				if (arr[j] > arr[j + 1]) {
 					int temp = arr[j];
