@@ -1,3 +1,4 @@
+import javax.swing.tree.TreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Stack;
@@ -32,8 +33,38 @@ public class BinaryTree {
 		binaryTree.postOrderIterative(binaryTree.root);
 		System.out.println();
 		binaryTree.levelOrderTraversal(binaryTree.root);
+		System.out.println();
+		binaryTree.isSymmetric();
 	}
-	
+
+	private void isSymmetric() {
+		System.out.println(isSymmetric(root));
+	}
+
+	private boolean isSymmetric(Node root) {
+		if(root == null) {
+			return true;
+		}
+		Stack<Node> stack = new Stack();
+		stack.push(root.right);
+		stack.push(root.left);
+		while(!stack.isEmpty()) {
+			Node n1 = stack.pop();
+			Node n2 = stack.pop();
+			if(n1 == null && n2 == null) {
+				continue;
+			}
+			if(n1 == null || n2 == null || n1.data != n2.data) {
+				return false;
+			}
+			stack.push(n1.left);
+			stack.push(n1.right);
+			stack.push(n2.left);
+			stack.push(n2.right);
+		}
+		return true;
+	}
+
 
 	public void createBinaryTree() {
 		Node first = new Node(1);
