@@ -27,14 +27,30 @@ public class BinaryTree {
 		binaryTree.inOrderRecursive(binaryTree.root);
 		System.out.println();
 		binaryTree.inOrderIterative(binaryTree.root);
-		System.out.println();
 		binaryTree.postOrderRecursive(binaryTree.root);
 		System.out.println();
 		binaryTree.postOrderIterative(binaryTree.root);
-		System.out.println();
 		binaryTree.levelOrderTraversal(binaryTree.root);
 		System.out.println();
 		binaryTree.isSymmetric();
+		System.out.println();
+		binaryTree.invertTree();
+	}
+
+	private void invertTree() {
+		invertTree(root);
+	}
+
+	private Node invertTree(Node root) {
+		if(root == null) {
+			return root;
+		}
+		Node left = invertTree(root.left);
+		Node right = invertTree(root.right);
+
+		root.left = right;
+		root.right = left;
+		return root;
 	}
 
 	private void isSymmetric() {

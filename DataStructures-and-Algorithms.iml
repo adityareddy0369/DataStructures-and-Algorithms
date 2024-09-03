@@ -7,6 +7,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Java/Searching" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java/Sorting" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Java/DP" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Java/Problems" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
