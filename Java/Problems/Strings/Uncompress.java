@@ -1,5 +1,5 @@
 package Strings;
-
+// Two pointer
 public class Uncompress {
     public static void main(String[] args) {
         String s = "2t3o11g2s";
